@@ -1,0 +1,181 @@
+<!-- Author: Justin Barlowe
+Title:index.ejs
+Date: 6/13/2023
+Description: Landing page for Pets-R-Us -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <linkhref="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <title>Pets-R-Us</title>
+  </head>
+
+  <body>
+    <!-- Including header partial -->
+    <%- include('partials/header.ejs') %>
+        <!-- Introduction section -->
+    <div class="container">
+      <div class="introduction">
+        <h1>Welcome to Pets-R-Us!</h1>
+        <h2>Where your Pet's Happiness and Well-being Matter Most</h2>
+        <div class="top-image">
+          <img
+            src="/images/landing image.jpg"
+            id="landing-image"
+            alt="Pets Playing"
+          />
+        </div>
+        <div class="intro">
+        <p>
+          At Pets-R-Us, we specialize in grooming, training, and boarding
+          services, providing exceptional care for your beloved pets. Our
+          experienced team of pet experts is dedicated to creating a warm and
+          inviting environment where tails wag and purrs abound. With
+          state-of-the-art facilities and a compassionate approach, we tailor
+          our services to meet the unique needs of each pet. From refreshing
+          grooming sessions to fun-filled training classes and safe boarding
+          experiences, your pets are in good hands.
+        </p>
+        <p>
+          Discover why Pets-R-Us is the go-to destination for all your pet care
+          needs. Let us pamper your pets and create unforgettable moments
+          together.
+        </p></div>
+      </div>
+      <!-- Locations section -->
+      <div class="locations">
+        <div class="location-header">
+          <h1>Locations</h1>
+        </div>
+        <div class="location-descriptions">
+          <div class="location1">
+            <img src="/images/location.jpg" alt="Location 1" />
+            <h2>City Center</h2>
+            <h3>123 Cameron Way<br />Daytona, Nebraska 12345</h3>
+            <span>Monday - Friday 8am to 8pm</span>
+            <span>Saturday - Sunday 9am to 7pm</span>
+          </div>
+          <div class="location1">
+            <img src="/images/location2.jpg" alt="Location 2" />
+            <h2>Grandville Mall</h2>
+            <h3>1234 Freeman Parkway<br />Omaha, Nebraska 12345</h3>
+            <span>Monday - Friday 8am to 8pm</span>
+            <span>Saturday - Sunday 9am to 7pm</span>
+          </div>
+          <div class="location1">
+            <img src="/images/location3.jpg" alt="Location 3" />
+            <h2>Westside</h2>
+            <h3>1234 Wilson Road<br />Random, Nebraska 12345</h3>
+            <span>Monday - Friday 8am to 8pm</span>
+            <span>Saturday - Sunday 9am to 7pm</span>
+          </div>
+        </div>
+      </div>
+      <!-- Dog of the week section -->
+      <div class="dogoftheweek">
+        <div class="dogoftheweek-header">
+          <h1>Dog of the week!</h1>
+        </div>
+        <img
+          src="/images/dogoftheweek.jpg"
+          id="dogofweekpic"
+          alt="Dog of the week picture"
+        /><br>
+        <div class="dogoftheweek-description">
+          Introducing Buster: Our Dog of the Week!
+
+          <p>
+            Meet Buster, the lovable Yellow Labrador Retriever who steals hearts
+            wherever he goes. With his golden coat and wagging tail, Buster
+            brings joy to everyone he meets. At Pets-R-Us, Buster's friendly
+            nature and gentle disposition make him a favorite among staff and
+            furry friends. His playful antics and endless enthusiasm create a
+            warm and engaging environment for all.
+          </p>
+
+          <p>
+            Join us in experiencing Buster's contagious happiness during your
+            next visit. Let him remind you of the unconditional love dogs bring
+            to our lives.
+          </p>
+        </div>
+      </div>
+      <!-- Testimonials section -->
+      <div class="testimonial-header">
+        <h1>Testimonials</h1>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonial">
+          <img src="/images/testimonial1.jpg" alt="Testimonial 1" />
+          <h3>Dexter Morgan</h3>
+          <p>
+            "Pets-R-Us is Whiskers' second home! The caring staff provides
+            excellent grooming and boarding services. Thank you for always
+            taking great care of my cat!"
+          </p>
+        </div>
+
+        <div class="testimonial">
+          <img src="/images/testimonial2.jpg" alt="Testimonial 2" />
+          <h3>Jamie Batista</h3>
+          <p>
+            "Pets-R-Us is paws down the best! They offer top-notch grooming
+            services and helped me find the perfect products for my dog. Thank
+            you for keeping Buddy happy!"
+          </p>
+        </div>
+
+        <div class="testimonial">
+          <img src="/images/testimonial3.jpg" alt="Testimonial 3" />
+          <h3>Arthur Mitchell</h3>
+          <p>
+            "Pets-R-Us is Rio's paradise! They have a fantastic selection of
+            bird supplies and knowledgeable staff. Thanks for being a favorite
+            spot for my parrot!."
+          </p>
+        </div>
+      </div>
+      <!-- Contact us section -->
+      <div class="contact-us-header">
+        <h1>Contact Us!</h1>
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <form>
+            <label for="name">Your Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
+            <label for="email">Your Email:</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+              required
+            />
+            <label for="message">Your Message:</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Including footer partial -->
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <%- include('partials/header.ejs') %>
+
+            <body>
+                <div class="grooming-header">
+                    <h1>Pets-R-Us Grooming</h1>
+                </div>
+                <div class="grooming-into">
+                    <p>At Pets-R-Us Grooming, we understand the importance of keeping your furry friends looking and
+                        feeling their best. Our dedicated team of professional groomers is passionate about providing
+                        top-quality grooming services tailored to meet the unique needs of each pet. With our expertise
+                        and love for animals, we strive to create a relaxing and enjoyable grooming experience for both
+                        pets and their owners.</p>
+
+                    <p>We offer a wide range of grooming services to cater to the specific needs of different breeds and
+                        individual pets. Whether your pet requires a regular trim, a bath, or a complete makeover, our
+                        skilled groomers are trained to handle all types of grooming requests. We use high-quality
+                        grooming products that are gentle on your pet's skin and coat, ensuring they look their best
+                        without compromising their well-being. </p>
+                        <p>Take a look at the services we offer below!</p>
+                </div>
+               
+                <div class="grooming-container">
+                    <div class="service">
+                        <h2>Bath and Brush</h2>
+                        <table>
+                            <tr>
+                                <th>Description</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Bath brush-out</td>
+                                <td>$35 - $55</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="service">
+                        <h2>Haircut and Styling</h2>
+                        <table>
+                            <tr>
+                                <th>Description</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Haircut</td>
+                                <td>$45 - $65</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="service">
+                        <h2>Nail Trim</h2>
+                        <table>
+                            <tr>
+                                <th>Description</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Nail Trimming</td>
+                                <td>$15</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="service">
+                        <h2>Teeth Cleaning</h2>
+                        <table>
+                            <tr>
+                                <th>Description</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Teeth cleaning</td>
+                                <td>$65</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </body>
+
+            <%- include('partials/footer.ejs') %>
+</body>
+
+</html>
