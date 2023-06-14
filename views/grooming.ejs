@@ -3,26 +3,11 @@ Title:grooming.ejs
 Date: 6/13/2023
 Description: Grooming page for Pets-R-Us -->
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <title>Document</title>
-</head>
+<%- include('partials/head.ejs') %>
 
 <body>
     <main>
-        <%- include('partials/header.ejs') %>
+        <header><%- include('partials/header.ejs') %></header>
 
             <body>
                 <div class="grooming-header">
@@ -99,7 +84,7 @@ Description: Grooming page for Pets-R-Us -->
                 </div>
             </body>
 
-            <%- include('partials/footer.ejs') %>
+           <footer> <%- include('partials/footer.ejs') %></footer>
 </body>
 
 </html>

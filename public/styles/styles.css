@@ -12,7 +12,6 @@ Description: CSS styling page for Pets-R-Us */
 
 body {
   background-color: skyblue;
-  color: white;
   position: relative;
   min-height: 100vh;
 }
@@ -56,6 +55,12 @@ h1 {
 .nav-link a {
   display: block;
   padding: 1rem;
+  font-weight: bold;
+}
+
+.nav-link a:hover{ 
+  transform:scale(1.1);
+  transition: ease-in-out 0.3s;
 }
 
 .footer {
