@@ -27,9 +27,13 @@ app.get('/grooming', (req, res) => {
     res.render('grooming');
 });
 
-// app.get('/training', (req, res) => {
-//     res.render('training');
-// });
+app.get('/training', (req, res) => {
+    res.render('training');
+});
+
+app.get('/boarding', (req, res) => {
+    res.render('boarding');
+});
 
 //Set port and console log
 app.listen(port, () => {
