@@ -1,0 +1,22 @@
+<%- include('partials/head.ejs') %>
+<header><%- include('partials/header.ejs') %></header>
+<hr>
+
+<h1>Registration Form</h1>
+<div class="register">
+<form action="/register" method="POST">
+  <div>
+    <label for="customerId">Customer ID:</label>
+    <input type="text" id="customerId" name="customerId" required>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <button type="submit">Register</button>
+</form>
+</div>
+
+<footer><%- include('partials/footer.ejs') %></footer>

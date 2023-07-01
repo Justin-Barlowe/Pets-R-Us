@@ -11,9 +11,16 @@ Description: CSS styling page for Pets-R-Us */
 }
 
 body {
-  background-color: skyblue;
+  background-color: #009579;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 180px;
   min-height: 100vh;
+}
+
+.content {
+  flex: 1;
 }
 
 h1 {
@@ -66,15 +73,20 @@ h1, h2 {
   transition: ease-in-out 0.3s;
 }
 
+footer  {
+  flex-shrink: 0;
+}
+
 .footer {
   width: 100%;
-  left: 0;
-  bottom: 0;
   text-align: center;
   color: white;
   padding-top: 5px;
-  flex-shrink: 0;
-  
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: -180px;
 }
 
 
@@ -306,4 +318,46 @@ tr:hover {
 
 p {
   font-size: 18px;
+}
+
+.register {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register input[type="text"],
+.register input[type="email"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: black;
+}
+
+.register input[type="text"]:focus,
+.register input[type="email"]:focus {
+  outline: none;
+  border-color: #87b5ff;
+}
+
+.register button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #006eff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register button[type="submit"]:hover {
+  background-color: #45a049;
 }
