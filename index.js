@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const mongoose = require('mongoose');
-const Customer = require('./models/customer'); // Import the Customer model
+const customer = require('./models/customer'); // Import the Customer model
 
 const conn = 'mongodb+srv://web340_admin:WADUhek12!%40@bellevueuniversity.w2mknhu.mongodb.net/web340DB';
 
@@ -20,6 +20,7 @@ mongoose
   .catch((err) => {
     console.log("Not Connected to MongoDB ERROR! ", err);
   });
+
 
 // Static Files
 app.use(express.static('public'));
@@ -33,8 +34,10 @@ app.use('/partials', express.static(__dirname + '/views/partials'));
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-app.use(express.urlencoded({ extended: true })); // Middleware to parse form data
+// Middleware to parse form data
+app.use(express.urlencoded({ extended: true })); 
 
+// Routes 
 app.get('/', (req, res) => {
   res.render('index');
 });
@@ -55,10 +58,11 @@ app.get('/register', (req, res) => {
   res.render('register');
 });
 
+// POST route for form submission
 app.post('/register', (req, res) => {
   const { customerId, email } = req.body;
 
-  const newCustomer = new Customer({ customerId, email });
+  const newCustomer = new customer({ customerId, email });
 
   newCustomer.save()
     .then(() => {
@@ -67,6 +71,17 @@ app.post('/register', (req, res) => {
     .catch(error => {
         console.log(error);
       res.status(500).send('Error registering customer.');
+    });
+});
+
+// GET route for customer list
+app.get('/customer-list', (req, res) => {
+  customer.find()
+    .then((result) => {
+      res.render('customer-list', { customers: result });
+    })
+    .catch((err) => {
+      console.log(err);
     });
 });
 

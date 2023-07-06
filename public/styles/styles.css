@@ -151,7 +151,7 @@ img {
 }
 
 .dogoftheweek-description {
-    max-width: 600px;
+    max-width: 80%;
     justify-content: center;
     margin: auto;
 }
@@ -241,7 +241,7 @@ hr {
 }
 
 .intro {
-    max-width: 600px;
+    max-width: 800px;
     justify-content: center;
     margin: auto;
 }
@@ -360,4 +360,28 @@ p {
 
 .register button[type="submit"]:hover {
   background-color: #45a049;
+}
+
+.usertable ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 600px;
+  align-items: center;
+  margin: auto;
+}
+
+.usertable ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.usertable ul li:hover {
+  background-color: #00000057;
+}
+
+.usertable ul li p {
+  margin: 0;
 }

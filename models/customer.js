@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Customer Schema
 const customerSchema = new mongoose.Schema({
   customerId: {
     type: String,
@@ -13,6 +14,8 @@ const customerSchema = new mongoose.Schema({
   }
 });
 
-const Customer = mongoose.model('Customer', customerSchema);
+// Customer Model
+const customer = mongoose.model('customer', customerSchema);
 
-module.exports = Customer;
+// Export the Customer Model
+module.exports = customer;

@@ -1,0 +1,27 @@
+<!-- Author: Justin Barlowe
+Title:customer-list.ejs
+Date: 7/6/2023
+Description: Customer list page for Pets-R-Us -->
+
+
+<%- include('partials/head.ejs') %>
+    <body>
+        <main>
+            <header><%- include('partials/header.ejs') %></header>
+            <hr>
+            <body>
+                <h1>Customer List</h1>
+                <div class="usertable">
+                    <ul>
+                        <!-- Loop through each customer and display their information -->
+                        <% customers.forEach(customer => { %>
+                            <li>
+                                <p><b>Username:</b> <%= customer.customerId %></p>
+                                <p><b>Email:</b> <%= customer.email %></p>
+                            </li>
+                        <% }) %>
+                    </ul>
+                </div>
+        <footer> <%- include('partials/footer.ejs') %></footer>
+    </body>
+</html>
