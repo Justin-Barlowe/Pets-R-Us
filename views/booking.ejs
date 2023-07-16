@@ -1,0 +1,41 @@
+<%- include('partials/head.ejs') %>
+<header><%- include('partials/header.ejs') %></header>
+<hr>
+
+<h1>Appointment Booking Form</h1>
+<div class="register">
+<form action="/appointments" method="POST">
+  <div>
+    <label for="userName">Username:</label>
+    <input type="text" id="userName" name="userName" required>
+  </div>
+
+  <div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+  </div>
+
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div id="services">
+    <label for="service">Service:</label>
+    <select id="service" name="service" required>
+      <% services.forEach(function(service) { %>
+        <option value="<%= service.value %>"><%= service.text %></option>
+      <% }); %>
+    </select>
+  </div>
+
+  <button type="submit">Book Appointment</button>
+</form>
+</div>
+
+<footer><%- include('partials/footer.ejs') %></footer>

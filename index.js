@@ -1,14 +1,11 @@
-// Author: Justin Barlowe
-// Title: index.js
-// Date: 6/13/2023
-// Description: Index JavaScript file for Pets-R-Us
-
-// Imports
 const express = require('express');
 const app = express();
 const port = 3000;
 const mongoose = require('mongoose');
-const customer = require('./models/customer'); // Import the Customer model
+const fs = require('fs');
+const path = require('path');
+const Customer = require('./models/customer'); // Import the Customer model
+const Appointment = require('./models/appointment'); // Import the Appointment model
 
 const conn = 'mongodb+srv://web340_admin:WADUhek12!%40@bellevueuniversity.w2mknhu.mongodb.net/web340DB';
 
@@ -21,14 +18,12 @@ mongoose
     console.log("Not Connected to MongoDB ERROR! ", err);
   });
 
-
 // Static Files
 app.use(express.static('public'));
 app.use('/css', express.static(__dirname + '/public/styles'));
 app.use('/js', express.static(__dirname + '/public'));
 app.use('/img', express.static(__dirname + '/public/images'));
 app.use('/partials', express.static(__dirname + '/views/partials'));
-
 
 // Set Views and View Engine
 app.set('views', './views');
@@ -58,11 +53,18 @@ app.get('/register', (req, res) => {
   res.render('register');
 });
 
+app.get('/booking', (req, res) => {
+  // load services from the JSON file
+  const services = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'public/data/services.json'), 'utf8'));
+  
+  res.render('booking', { services });
+});
+
 // POST route for form submission
 app.post('/register', (req, res) => {
   const { customerId, email } = req.body;
 
-  const newCustomer = new customer({ customerId, email });
+  const newCustomer = new Customer({ customerId, email });
 
   newCustomer.save()
     .then(() => {
@@ -74,9 +76,25 @@ app.post('/register', (req, res) => {
     });
 });
 
+// POST route for appointment form submission
+app.post('/appointments', (req, res) => {
+  const { userName, firstName, lastName, email, service } = req.body;
+
+  const newAppointment = new Appointment({ userName, firstName, lastName, email, service });
+
+  newAppointment.save()
+    .then(() => {
+      res.redirect('/');
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).send('Error registering appointment.');
+    });
+});
+
 // GET route for customer list
 app.get('/customer-list', (req, res) => {
-  customer.find()
+  Customer.find()
     .then((result) => {
       res.render('customer-list', { customers: result });
     })
