@@ -53,6 +53,21 @@ app.get('/register', (req, res) => {
   res.render('register');
 });
 
+app.get('/appointments', (req, res) => {
+  res.render('appointments');
+});
+
+app.get('/api/appointments/:email', async (req, res) => {
+  try {
+    const appointments = await Appointment.find({ email: req.params.email });
+    res.json(appointments);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+
 app.get('/booking', (req, res) => {
   // load services from the JSON file
   const services = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'public/data/services.json'), 'utf8'));

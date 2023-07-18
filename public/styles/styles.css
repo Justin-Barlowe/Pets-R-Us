@@ -400,3 +400,66 @@ form div {
   padding-bottom: 10px;
 }
 
+.appointment-list {
+  margin-top: 20px;
+}
+
+.appointment-list div {
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.appointment-list h2 {
+  margin: 0;
+}
+
+.appointment-list p {
+  margin: 0;
+}
+
+#lookup-form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#lookup-form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #006eff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#lookup-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#lookup-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#lookup-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: black;
+}
+
+input {
+  color: black;
+}
+
+#appointments {
+  max-width: 500px;
+  margin: 0 auto;
+
+}
