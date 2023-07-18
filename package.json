@@ -4,7 +4,7 @@
   "description": "Pets-R-Us repository for Bellevue University Web-340",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "dev": "nodemon"
   },
   "author": "Justin Barlowe",
@@ -24,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/Justin-Barlowe/Pets-R-Us/issues"
   },
-  "homepage": "https://github.com/Justin-Barlowe/Pets-R-Us#readme"
+  "homepage": "https://github.com/Justin-Barlowe/Pets-R-Us#readme",
+
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.3.1"}
+    
 }
